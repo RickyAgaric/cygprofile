@@ -18,7 +18,7 @@ git config --global alias.br branch
 
 # credential
 git config --global credential.helper cache
-git config credential.helper 'cache --timeout=3600'
+git config --global credential.helper 'cache --timeout=3600'
 
 # editor
 git config --global core.editor ~/git/git-core-editor.sh
