@@ -1,0 +1,16 @@
+#!/usr/bin/expect
+
+if {$argc == 0} {
+	set tel_host "9.115.21.22"
+} else {
+	set tel_host $argv
+}
+set user_name "liyixa@cn.ibm.com"
+set user_pass "d595chwr"
+
+spawn telnet "$tel_host"
+expect "name:"
+send "$user_name\r"
+expect "assword:"
+send "$user_pass\r"
+interact

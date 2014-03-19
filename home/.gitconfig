@@ -1,0 +1,31 @@
+[user]
+	name = RickyAgaric
+	email = rickyagaric@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	st = status
+	ci = commit
+	df = diff
+	co = checkout
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s [%an]%d\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[core]
+	editor = ${HOME}/bin/git-core-editor.sh
+	pager = less -x4
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	cmd = ${HOME}/bin/git-difftool-wrapper.sh \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[credential]
+	helper = cache
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	path = c:/Software/BeyondCompare3/bcomp.exe

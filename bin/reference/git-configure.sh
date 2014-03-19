@@ -21,10 +21,10 @@ git config --global credential.helper cache
 git config --global credential.helper 'cache --timeout=3600'
 
 # editor
-git config --global core.editor ~/git/git-core-editor.sh
+git config --global core.editor ~/bin/git-core-editor.sh
 
 # diff tool
 ## didn't work
 git config --global diff.tool bc3
-git config --global difftool.bc3.cmd "~/git/git-difftool-wrapper.sh \"\$LOCAL\" \"\$REMOTE\""
+git config --global difftool.bc3.cmd "~/bin/git-difftool-wrapper.sh \"\$LOCAL\" \"\$REMOTE\""
 git config --global difftool.prompt false

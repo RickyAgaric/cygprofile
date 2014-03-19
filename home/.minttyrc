@@ -1,0 +1,7 @@
+BoldAsFont=no
+Transparency=high
+Font=Consolas
+FontHeight=12
+Columns=115
+Rows=43
+RightClickAction=extend
