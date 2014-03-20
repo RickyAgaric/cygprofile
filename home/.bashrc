@@ -113,7 +113,7 @@ alias vdir='ls --color=auto --format=long'
 alias ll='ls -l'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
-
+#
 # Some shortcuts for git commond
 alias gs='git status'
 alias ga='git add'
@@ -122,6 +122,12 @@ alias gc='git commit'
 alias gcrb='git commit -m "rebase from cc on`git branch | grep "*" | sed s/\*//`"'
 alias gd='git diff'
 alias go='git checkout'
+
+# Environment variables
+# User defined variables
+if [ -f "${HOME}/.bash_env" ]; then
+  source "${HOME}/.bash_env"
+fi
 
 # Umask
 #

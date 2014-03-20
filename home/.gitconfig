@@ -15,12 +15,12 @@
 	type = cat-file -t
 	dump = cat-file -p
 [core]
-	editor = ${HOME}/bin/git-core-editor.sh
+	editor = ${CYGCONFIGHOME}/bin/git-core-editor.sh
 	pager = less -x4
 [diff]
 	tool = bc3
 [difftool "bc3"]
-	cmd = ${HOME}/bin/git-difftool-wrapper.sh \"$LOCAL\" \"$REMOTE\"
+	cmd = ${CYGCONFIGHOME}/bin/git-difftool-wrapper.sh \"$LOCAL\" \"$REMOTE\"
 [difftool]
 	prompt = false
 [credential]

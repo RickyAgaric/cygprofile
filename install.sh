@@ -5,28 +5,29 @@
 # fi' >> ~/test.profile
 
 # 0. Define enviorment variables
-profiles='.bash_profile
+profiles='.bash_env
+.bash_profile
 .bashrc
 .gitconfig
-.inputrc
-.minttyrc
-.profile'
-homebakdir=${HOME}/.cygprofile/bak/home/`date +%Y%m%d_%H%M%S`
-homesrcdir=${HOME}/.cygprofile/home
-binsrcdir=${HOME}/.cygprofile/bin
+.minttyrc'
+homebakdir=${HOME}/.cyghome/bak/`date +%Y%m%d_%H%M%S`/home
+homesrcdir=${HOME}/.cyghome/home
 
-# 1. Copy bin dir to home directory
-cp -r ${binsrcdir} ${HOME}
-
-# 2. Backup old profiles
-mkdir ${homebakdir}
+# 1. Backup old profiles
+mkdir -p ${homebakdir}
 for profile in ${profiles}
 do
   cp ${HOME}/${profile} ${homebakdir}
 done
 
-# 3. Replace old profiles using new profiles
+# 2. Replace old profiles using new profiles
 for profile in ${profiles}
 do
   cp ${homesrcdir}/${profile} ${HOME}
 done
+
+# 3. Add some link
+# for driver in /cygdrive/*
+# do
+#   ln -s $driver `basename $driver`
+# done

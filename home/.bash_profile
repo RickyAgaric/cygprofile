@@ -28,14 +28,20 @@ if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"
 fi
 
-# Set PATH so it includes user's private bin if it exists
-if [ -d "${HOME}/bin" ] ; then
-  PATH="${HOME}/bin:${PATH}"
+# Set PATH so it includes cyghome's private bin if it exists
+export CYGCONFIGHOME=${HOME}/.cyghome
+if [ -d "${CYGCONFIGHOME}/bin" ] ; then
+  PATH="${CYGCONFIGHOME}/bin:${PATH}"
 fi
 
-# Start ssh-agent
-# if [ -f . "${HOME}/bin/ssh-startAgent.sh" ]
-#   source "${HOME}/bin/ssh-startAgent.sh"
+# Start ssh-agent for ssh authorization
+# if [ -f "${CYGCONFIGHOME}/bin/ssh-startAgent.sh" ]
+#   source "${CYGCONFIGHOME}/bin/ssh-startAgent.sh"
+# fi
+
+# Set PATH so it includes user's private bin if it exists
+# if [ -d "${HOME}/bin" ] ; then
+#   PATH="${HOME}/bin:${PATH}"
 # fi
 
 # Set MANPATH so it includes users' private man if it exists

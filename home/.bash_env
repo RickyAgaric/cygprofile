@@ -1,0 +1,11 @@
+# Software root dir
+export TOOLS_ROOT=/cygdrive/c/Software
+
+# Intranet ID and password 
+export INTRANET_ID=liyixa@cn.ibm.com
+export INTRANET_PWD=
+
+# Goagent ID and password
+export GOAGENT_USER=rickyigame@gmail.com
+export GOAGENT_PWD=
+
