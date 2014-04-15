@@ -11,10 +11,10 @@ expect {
     send_user "successfully uploaded!\r"
   }
   "Email:" {
-    send "${GOAGENT_USER}\r"
+    send "${GOAGENT_ID}\r"
     exp_continue
   }
-  "Password for ${GOAGENT_USER}:" {
+  "Password for ${GOAGENT_ID}:" {
     send "${GOAGENT_PWD}\r"
     exp_continue
   }
